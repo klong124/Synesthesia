@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\ChangeLevel.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\LevelFive.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\LevelFour.cs" />
+     <Compile Include="Assets\Scripts\Level Scripts\LevelNine.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\LevelThree.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\levelOne.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\levelTwo1.cs" />
