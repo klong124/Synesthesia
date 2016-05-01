@@ -12,35 +12,35 @@ public class LevelFive : MonoBehaviour {
 	public AudioSource e;
 	public AudioSource g;
 	public AudioSource b;
-	public AudioSource d;
+	public AudioSource dh;
 	public int numClicked;
 	public bool iswinning;
 
 	// Use this for initialization
 	IEnumerator Start () {
 		melody = new string[7];
-		melody [0] = "c";
-		melody [1] = "e";
-		melody [2] = "g";
-		melody [3] = "b";
+		melody [0] = "b";
+		melody [1] = "dh";
+		melody [2] = "b";
+		melody [3] = "dh";
 		melody [4] = "b";
-		melody [5] = "c";
-		melody [6] = "c";
+		melody [5] = "b";
+		melody [6] = "b";
 		userInput = new string[7];
 		audioPlaying = true;
-		c.Play ();
+		b.Play ();
 		yield return new WaitForSeconds (1);
-		e.Play ();
+		dh.Play ();
 		yield return new WaitForSeconds (1);
-		g.Play ();
+		b.Play ();
 		yield return new WaitForSeconds (1);
-		e.Play ();
+		dh.Play ();
 		yield return new WaitForSeconds (1);
-		c.Play ();
+		b.Play ();
 		yield return new WaitForSeconds (1);
-		c.Play ();
+		b.Play ();
 		yield return new WaitForSeconds (1);
-		c.Play ();
+		b.Play ();
 		yield return new WaitForSeconds (1);
 		numClicked = 0;
 		audioPlaying = false;
@@ -56,6 +56,8 @@ public class LevelFive : MonoBehaviour {
 				g.Play ();
 			} else if (note.Equals ("b")) {
 				b.Play ();
+			} else if (note.Equals ("dh")) {
+				dh.Play ();
 			}
 			userInput [numClicked] = note;
 			numClicked++;
@@ -83,11 +85,11 @@ public class LevelFive : MonoBehaviour {
 		}
 		if (iswinning) {
 			endImageWin.SetActive (true);
-			PlayerPrefs.SetString ("level4", "true");
+			PlayerPrefs.SetString ("level5", "true");
 		} else {
 			endImageLose.SetActive (true);
-			if (!PlayerPrefs.GetString ("level4").Equals ("true")) {
-				PlayerPrefs.SetString ("level4", "false");
+			if (!PlayerPrefs.GetString ("level5").Equals ("true")) {
+				PlayerPrefs.SetString ("level5", "false");
 			}
 		}
 	}
