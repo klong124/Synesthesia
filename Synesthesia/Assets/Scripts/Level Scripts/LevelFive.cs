@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class LevelFour : MonoBehaviour {
+public class LevelFive : MonoBehaviour {
 	public GameObject endImageWin;
 	public GameObject endImageLose;
 	public string[] melody;
@@ -12,6 +12,7 @@ public class LevelFour : MonoBehaviour {
 	public AudioSource e;
 	public AudioSource g;
 	public AudioSource b;
+	public AudioSource d;
 	public int numClicked;
 	public bool iswinning;
 
@@ -33,9 +34,9 @@ public class LevelFour : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		g.Play ();
 		yield return new WaitForSeconds (1);
-		b.Play ();
+		e.Play ();
 		yield return new WaitForSeconds (1);
-		b.Play ();
+		c.Play ();
 		yield return new WaitForSeconds (1);
 		c.Play ();
 		yield return new WaitForSeconds (1);
